@@ -17,7 +17,6 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.17.0"),
         .package(url: "https://github.com/SDWebImage/libwebp-Xcode.git", from: "1.1.0")
     ],
     targets: [
@@ -25,7 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "SDWebImageWebPCoder",
-            dependencies: ["SDWebImage", "libwebp"],
+            dependencies: ["libwebp"],
             path: ".",
             sources: ["SDWebImageWebPCoder/Classes"],
             publicHeadersPath: "SDWebImageWebPCoder/Classes",
